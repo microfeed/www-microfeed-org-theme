@@ -1,0 +1,21 @@
+{
+  "assets": [
+    "assets/horizontal-logo.png"
+  ],
+  "author": "Site owner",
+  "description": "Automatically migrated from the previous custom theme “custom”.",
+  "files": {
+    "rssStylesheet": "rss-stylesheet.xsl",
+    "webBodyEnd": "web-body-end.mustache",
+    "webBodyStart": "web-body-start.mustache",
+    "webFeed": "web-feed.mustache",
+    "webHeader": "web-header.mustache",
+    "webItem": "web-item.mustache"
+  },
+  "formatVersion": 1,
+  "license": "Unspecified",
+  "microfeed": "*",
+  "name": "Imported site theme",
+  "packageId": "local.legacy-theme",
+  "version": "1.0.0"
+}

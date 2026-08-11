@@ -1,0 +1,85 @@
+<main>
+  <section class="text-center mt-16">
+    <h1>
+    <div>
+        agentic cms for
+        <span class="animated-text"></span>
+</div>
+      <div>
+        self-hosted on <span class="cloudflare-brand">cloudflare</span>
+      </div>
+    </h1>
+    <div class="text-helper-color">
+      {{{description}}}
+    </div>
+    <div class="mt-16">
+     <a href="https://docs.microfeed.org/start-here/" class="button-27">
+       get started for free <span class="icon-arrow-right"></span>
+     </a>
+    </div>
+    <div class="text-sm text-center mt-4">
+      <a href="mailto:support@microfeed.org" class="text-muted-color">support@microfeed.org</a>
+    </div>
+    <div class="mt-16">
+      <img src="https://media-cdn.microfeed.org/production/media/rich-editor/items/sJQ1j_8by7r/image-c90ed2ffeba1ec66b1cae1f01c63efc2.png" class="landing-screenshot" />
+    </div>
+  </section>
+
+  <section class="whatsnew-section">
+    <h2 class="border-b">
+      what's new?
+    </h2>
+        <div class="mb-4">
+          <div class="flex flex-wrap">
+            {{#_microfeed.subscribe_methods}}
+              <a href="{{url}}" class="hover:opacity-50 mr-4 mb-2">
+              <div class="flex pr-2">
+                <div class="flex items-center">
+                  <img src="{{image}}" class="w-3.5"/>
+                </div>
+                <div class="ml-2 text-sm">{{name}}</div>
+              </div>
+            </a>
+            {{/_microfeed.subscribe_methods}}
+          </div>
+        </div>
+    <div>
+      {{^items.length}}
+      No items.
+      {{/items.length}}
+
+      {{#items}}
+      <div class="mb-4">
+        <a href="{{_microfeed.web_url}}" class="mb-1">
+          {{title}}
+          <span class="icon-arrow-right"></span>
+        </a>
+        <div class="text-sm text-helper-color">
+          {{_microfeed.date_published_short}}
+
+          {{#_microfeed.duration_hhmmss}}
+          &middot;
+          <i>{{_microfeed.duration_hhmmss}}</i>
+          {{/_microfeed.duration_hhmmss}}
+        </div>
+      </div>
+      {{/items}}
+    </div>
+
+    <div class="flex justify-center mt-64">
+      {{#_microfeed.items_prev_cursor}}
+      <div class="px-2">
+        <a href="?prev_cursor={{_microfeed.items_prev_cursor}}&sort={{_microfeed.items_sort_order}}"><span
+          class="icon-arrow-left"> Prev</span></a>
+      </div>
+      {{/_microfeed.items_prev_cursor}}
+
+      {{#_microfeed.items_next_cursor}}
+      <div class="px-2">
+        <a href="?next_cursor={{_microfeed.items_next_cursor}}&sort={{_microfeed.items_sort_order}}">Next <span
+          class="icon-arrow-right"></span></a>
+      </div>
+      {{/_microfeed.items_next_cursor}}
+    </div>
+  </section>
+</main>

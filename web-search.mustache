@@ -1,0 +1,19 @@
+<main class="search-shell">
+  <section>
+    <h1>Search microfeed</h1>
+    <p class="text-helper-color">Search published updates and Pages.</p>
+    <form class="search-form" action="/search/" method="get" data-microfeed-search-scope>
+      <label for="microfeed-search-page-input">Search this site</label>
+      <input
+        class="search-input"
+        id="microfeed-search-page-input"
+        name="q"
+        type="search"
+        value="{{search.query}}"
+        autocomplete="off"
+        data-microfeed-search-input
+      />
+      <div class="search-results" aria-live="polite" data-microfeed-search-results></div>
+    </form>
+  </section>
+</main>

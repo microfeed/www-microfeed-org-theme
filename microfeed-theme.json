@@ -1,4 +1,5 @@
 {
+  "$schema": ".microfeed/schemas/manifest.schema.json",
   "assets": [
     "assets/horizontal-logo.png"
   ],
@@ -10,14 +11,16 @@
     "webBodyStart": "web-body-start.mustache",
     "webFeed": "web-feed.mustache",
     "webHeader": "web-header.mustache",
-    "webItem": "web-item.mustache"
+    "webItem": "web-item.mustache",
+    "webPage": "web-page.mustache",
+    "webSearch": "web-search.mustache"
   },
-  "formatVersion": 1,
+  "formatVersion": 2,
   "homepage": "https://www.microfeed.org/",
   "license": "Unspecified",
   "microfeed": "*",
   "name": "www.microfeed.org",
   "packageId": "microfeed.www",
   "repository": "https://github.com/microfeed/www-microfeed-org-theme",
-  "version": "1.0.0"
+  "version": "1.1.0"
 }

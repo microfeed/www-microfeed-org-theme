@@ -1,8 +1,16 @@
-<nav class="flex items-center">
+<nav class="site-header flex items-center" aria-label="Site navigation">
   <div class="flex-1">
   <a href="/">
     <img src="{{_theme.asset_base_url}}horizontal-logo.png" alt="microfeed" class="nav-logo" />
   </a>
+  </div>
+  <div class="site-links flex items-center">
+    {{#navigation_pages}}
+    <a href="{{url}}">{{navigation_label}}</a>
+    {{/navigation_pages}}
+    <button type="button" class="search-trigger" data-microfeed-search-open>
+      Search <kbd>⌘K</kbd>
+    </button>
   </div>
   <div class="flex-none flex">
   <div class="hide-mobile mr-4">

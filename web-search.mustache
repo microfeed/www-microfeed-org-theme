@@ -1,7 +1,7 @@
-<main class="search-shell">
+<main id="main-content" class="search-shell">
   <section>
     <h1>Search microfeed</h1>
-    <p class="text-helper-color">Search published updates and Pages.</p>
+    <p class="search-intro">Search published updates and Pages.</p>
     <form class="search-form" action="/search/" method="get" data-microfeed-search-scope>
       <label for="microfeed-search-page-input">Search this site</label>
       <input
@@ -13,7 +13,7 @@
         autocomplete="off"
         data-microfeed-search-input
       />
-      <div class="search-results" aria-live="polite" data-microfeed-search-results></div>
+      <div class="search-results" aria-live="polite" data-microfeed-search-results data-microfeed-search-details></div>
     </form>
   </section>
 </main>

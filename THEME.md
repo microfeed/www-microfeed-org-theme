@@ -13,11 +13,11 @@ people, coding agents, and CI.
 ## Edit and test loop
 
 1. Read `microfeed-theme.json` and `.microfeed/schemas/theme-context.schema.json`.
-2. Edit the Mustache/XSL files. Format v2 adds the Page and Search views to the
-   six original slots. Mustache is logicless: variables, sections, inverted
-   sections, and iteration only.
-3. Run `yarn validate`.
-4. Run `yarn test`.
+2. Edit the Mustache/XSL files and the Vite sources under `src/`. Format v2
+   adds the Page and Search views to the six original slots. Mustache is
+   logicless: variables, sections, inverted sections, and iteration only.
+3. Run `yarn build` to regenerate `assets/theme.js` and `assets/theme.css`.
+4. Run `yarn check`.
 5. Run `yarn preview` and inspect feed, item, Page, Search, RSS, mobile, and
    desktop views.
 6. Increment the immutable semantic version before installation.

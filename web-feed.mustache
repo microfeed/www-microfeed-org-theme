@@ -1,85 +1,168 @@
-<main>
-  <section class="text-center mt-16">
-    <h1>
-    <div>
-        an agentic cms for
-        <span class="animated-text"></span>
-</div>
-      <div>
-        self-hosted on <span class="cloudflare-brand">cloudflare</span>
-      </div>
+<main id="main-content">
+  <section class="home-hero" aria-labelledby="hero-title">
+    {{#items.0}}
+    <a class="hero-update" href="{{_microfeed.web_url}}">
+      <span class="hero-update-title">{{title}}</span>
+      <span class="hero-update-arrow" aria-hidden="true">→</span>
+    </a>
+    {{/items.0}}
+    {{^items.0}}
+    <p class="hero-eyebrow">Open source · Built for Cloudflare</p>
+    {{/items.0}}
+    <h1 id="hero-title">
+      <span>
+        An agentic CMS for
+        <em class="hero-rotating-word" aria-hidden="true"></em>
+        <span class="sr-only">podcasts, blogs, photos, documents, videos, and URLs</span>
+      </span>
+      <span>Self-hosted on <strong>Cloudflare</strong></span>
     </h1>
-    <div class="text-helper-color">
+    <div class="hero-intro">
       {{{description}}}
+      {{^description}}
+      microfeed publishes blogs, podcasts, photos, videos, documents, and links—without another server to manage.
+      {{/description}}
     </div>
-    <div class="mt-16">
-     <a href="https://docs.microfeed.org/start-here/" class="button-27">
-       get started for free <span class="icon-arrow-right"></span>
-     </a>
-    </div>
-    <div class="text-sm text-center mt-4">
-      <a href="mailto:support@microfeed.org" class="text-muted-color">support@microfeed.org</a>
-    </div>
-    <div class="mt-16">
-      <img src="https://media-cdn.microfeed.org/production/media/rich-editor/items/sJQ1j_8by7r/image-c90ed2ffeba1ec66b1cae1f01c63efc2.png" class="landing-screenshot" />
+    <div class="hero-actions">
+      <a class="button-primary" href="https://docs.microfeed.org/start-here/">Get started for free <span aria-hidden="true">→</span></a>
+      <a class="text-link" href="#whats-new">What’s new <span aria-hidden="true">↓</span></a>
     </div>
   </section>
 
-  <section class="whatsnew-section">
-    <h2 class="border-b">
-      what's new?
-    </h2>
-        <div class="mb-4">
-          <div class="flex flex-wrap">
-            {{#_microfeed.subscribe_methods}}
-              <a href="{{url}}" class="hover:opacity-50 mr-4 mb-2">
-              <div class="flex pr-2">
-                <div class="flex items-center">
-                  <img src="{{image}}" class="w-3.5"/>
-                </div>
-                <div class="ml-2 text-sm">{{name}}</div>
-              </div>
-            </a>
-            {{/_microfeed.subscribe_methods}}
-          </div>
+  <section class="product-shot" aria-label="microfeed administration interface preview">
+    <figure class="shot-frame">
+      <figcaption class="shot-caption">
+        <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>microfeed admin</span>
+        <small>Screenshot placeholder</small>
+      </figcaption>
+      <div class="shot-placeholder" role="img" aria-label="Placeholder for the microfeed administration interface screenshot">
+        <div>
+          <span>Admin UI screenshot</span>
+          <strong>A calm place to publish.</strong>
         </div>
-    <div>
-      {{^items.length}}
-      No items.
-      {{/items.length}}
+      </div>
+    </figure>
+  </section>
 
-      {{#items}}
-      <div class="mb-4">
-        <a href="{{_microfeed.web_url}}" class="mb-1">
-          {{title}}
-          <span class="icon-arrow-right"></span>
+  <section class="deploy-section" aria-labelledby="deploy-title">
+    <div class="section-heading">
+      <span class="section-kicker">Deploy</span>
+      <h2 id="deploy-title">From clone to live in two steps.</h2>
+      <p>Your coding agent guides account authorization, resource setup, deployment, and first admin access.</p>
+    </div>
+    <ol class="deploy-steps">
+      <li class="deploy-step">
+        <span class="deploy-number">01</span>
+        <div>
+          <h3>Clone the repository</h3>
+          <code class="code-line">git clone https://github.com/microfeed/microfeed.git</code>
+        </div>
+      </li>
+      <li class="deploy-step">
+        <span class="deploy-number">02</span>
+        <div>
+          <h3>Ask your coding agent</h3>
+          <div class="agent-line">Deploy microfeed to Cloudflare.</div>
+        </div>
+      </li>
+    </ol>
+    <p class="deploy-note"><strong>Then follow the prompts.</strong> The supported tools handle the Cloudflare details and guide you through the rest.</p>
+  </section>
+
+  <section class="capabilities-band" aria-labelledby="capabilities-title">
+    <div class="capabilities">
+      <div class="capabilities-heading">
+        <span class="section-kicker">Why microfeed</span>
+        <h2 id="capabilities-title">Simple where it should be. Open where it matters.</h2>
+      </div>
+      <div class="capability-grid">
+        <article class="capability">
+          <span class="capability-number">01</span>
+          <h3>Agentic</h3>
+          <p>Agents can help set up your site and manage content through documented, reviewable workflows.</p>
+        </article>
+        <article class="capability">
+          <span class="capability-number">02</span>
+          <h3>Headless</h3>
+          <p>An ergonomic REST API makes it easy to connect automations, applications, and other tools.</p>
+        </article>
+        <article class="capability">
+          <span class="capability-number">03</span>
+          <h3>Serverless</h3>
+          <p>Cloudflare runs the application and storage. R2 includes 10 GB on the free tier.</p>
+        </article>
+        <article class="capability">
+          <span class="capability-number">04</span>
+          <h3>Sensible defaults</h3>
+          <p>Start with a complete site, then export the theme and customize every public view.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="workflow-section" aria-labelledby="workflow-title">
+    <figure class="agent-shot">
+      <figcaption class="shot-caption">
+        <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>coding agent</span>
+        <small>Screenshot placeholder</small>
+      </figcaption>
+      <div class="agent-placeholder" role="img" aria-label="Placeholder for a coding agent managing microfeed content">
+        <span>Coding-agent screenshot</span>
+      </div>
+    </figure>
+    <div class="workflow-copy">
+      <span class="section-kicker">People + agents</span>
+      <h2 id="workflow-title">Use the admin. Or ask an agent.</h2>
+      <p>microfeed stays understandable to the person who owns it. Agents add leverage without turning the system into a black box.</p>
+      <ul class="workflow-points">
+        <li>Publish every supported media type</li>
+        <li>Use one documented workflow for setup and content</li>
+        <li>Review exact targets before destructive actions</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="updates" id="whats-new" aria-labelledby="updates-title">
+    <div class="updates-heading">
+      <div>
+        <span class="section-kicker">Project updates</span>
+        <h2 id="updates-title">What’s new?</h2>
+        <p>Release notes, new capabilities, and lessons from building microfeed in public.</p>
+      </div>
+      <div class="subscribe-links" aria-label="Subscribe to microfeed updates">
+        {{#_microfeed.subscribe_methods}}
+        <a class="subscribe-link" href="{{url}}">
+          {{#image}}<img src="{{image}}" alt="" />{{/image}}
+          {{name}}
         </a>
-        <div class="text-sm text-helper-color">
-          {{_microfeed.date_published_short}}
-
-          {{#_microfeed.duration_hhmmss}}
-          &middot;
-          <i>{{_microfeed.duration_hhmmss}}</i>
-          {{/_microfeed.duration_hhmmss}}
-        </div>
+        {{/_microfeed.subscribe_methods}}
       </div>
+    </div>
+
+    {{^items.length}}
+    <div class="empty-state">No updates have been published yet.</div>
+    {{/items.length}}
+
+    <ol class="update-list">
+      {{#items}}
+      <li>
+        <a class="update-row" href="{{_microfeed.web_url}}">
+          <span class="update-title">{{title}} <span aria-hidden="true">→</span></span>
+          <time class="update-date" datetime="{{date_published}}">{{_microfeed.date_published_short}}</time>
+        </a>
+      </li>
       {{/items}}
-    </div>
+    </ol>
 
-    <div class="flex justify-center mt-64">
+    <nav class="pagination" aria-label="Changelog pagination">
       {{#_microfeed.items_prev_cursor}}
-      <div class="px-2">
-        <a href="?prev_cursor={{_microfeed.items_prev_cursor}}&sort={{_microfeed.items_sort_order}}"><span
-          class="icon-arrow-left"> Prev</span></a>
-      </div>
+      <a href="?prev_cursor={{_microfeed.items_prev_cursor}}&sort={{_microfeed.items_sort_order}}">← Newer</a>
       {{/_microfeed.items_prev_cursor}}
-
       {{#_microfeed.items_next_cursor}}
-      <div class="px-2">
-        <a href="?next_cursor={{_microfeed.items_next_cursor}}&sort={{_microfeed.items_sort_order}}">Next <span
-          class="icon-arrow-right"></span></a>
-      </div>
+      <a href="?next_cursor={{_microfeed.items_next_cursor}}&sort={{_microfeed.items_sort_order}}">Older →</a>
       {{/_microfeed.items_next_cursor}}
-    </div>
+    </nav>
   </section>
 </main>

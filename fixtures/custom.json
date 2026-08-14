@@ -1,11 +1,73 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
-  "title": "Package fixture",
+  "title": "microfeed",
+  "description": "<p>#opensource #agentic #serverless #free #headless</p>",
+  "home_page_url": "https://www.microfeed.org/",
+  "language": "en",
+  "authors": [
+    {
+      "name": "microfeed team"
+    }
+  ],
+  "_microfeed": {
+    "base_url": "https://www.microfeed.org/",
+    "copyright": "© 2026 Listen Notes, Inc.",
+    "items_order": "desc",
+    "items_sort": "published_at",
+    "items_sort_order": "desc",
+    "microfeed_version": "1.0.0",
+    "subscribe_methods": [
+      {
+        "name": "RSS",
+        "url": "https://www.microfeed.org/rss/"
+      },
+      {
+        "name": "JSON Feed",
+        "url": "https://www.microfeed.org/json/"
+      }
+    ],
+    "categories": []
+  },
   "items": [
     {
-      "id": "package-fixture",
-      "title": "A theme-specific example",
-      "content_html": "<p>Edit or remove this fixture.</p>"
+      "id": "agent-content-workflow",
+      "title": "A safer content workflow for coding agents",
+      "date_published": "2026-08-12T16:00:00Z",
+      "content_text": "Purpose-built tools help coding agents publish and manage content while credentials stay private.",
+      "_microfeed": {
+        "date_published_short": "Aug 12, 2026",
+        "web_url": "https://www.microfeed.org/i/agent-content-workflow/"
+      }
+    },
+    {
+      "id": "pages-and-search",
+      "title": "Public Pages and search arrive in theme format v2",
+      "date_published": "2026-08-08T16:00:00Z",
+      "content_text": "Themes can now own Page and Search views alongside Feed, Item, and RSS.",
+      "_microfeed": {
+        "date_published_short": "Aug 8, 2026",
+        "web_url": "https://www.microfeed.org/i/pages-and-search/"
+      }
+    },
+    {
+      "id": "theme-export",
+      "title": "Export a live theme into a standalone repository",
+      "date_published": "2026-08-03T16:00:00Z",
+      "content_text": "The latest theme tools make local validation, tests, and previews reproducible.",
+      "_microfeed": {
+        "date_published_short": "Aug 3, 2026",
+        "web_url": "https://www.microfeed.org/i/theme-export/"
+      }
+    },
+    {
+      "id": "rest-api",
+      "title": "The ergonomic REST API for headless publishing",
+      "date_published": "2026-07-28T16:00:00Z",
+      "content_text": "Build automations and integrations against a clear, documented content API.",
+      "_microfeed": {
+        "date_published_short": "Jul 28, 2026",
+        "web_url": "https://www.microfeed.org/i/rest-api/"
+      }
     }
   ]
 }

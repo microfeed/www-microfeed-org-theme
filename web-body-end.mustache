@@ -1,18 +1,14 @@
-<footer class="text-sm border-t text-center mb-16 text-helper-color">
-  <div class="mt-4">
-    {{#_microfeed.copyright}}
-    {{_microfeed.copyright}}
-    {{/_microfeed.copyright}}
-    {{^_microfeed.copyright}}
-    ©2022 {{_microfeed.publisher}}
-    {{/_microfeed.copyright}}
-  </div>
-
-  <div>
-    powered by <a href="https://www.microfeed.org/" class="text-black">microfeed</a>
-    (a <a class="text-black" href="https://www.listennotes.com/">Listen Notes</a> project)
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a class="footer-copyright" href="https://www.listennotes.com/" target="_blank" rel="noopener noreferrer">
+      {{#_microfeed.copyright}}{{_microfeed.copyright}}{{/_microfeed.copyright}}{{^_microfeed.copyright}}© {{current_year}} microfeed{{/_microfeed.copyright}}
+    </a>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="https://docs.microfeed.org/">Documentation</a>
+      <a href="https://github.com/microfeed/microfeed">GitHub</a>
+    </nav>
   </div>
 </footer>
 
-<!-- Place this tag in your head or just before your close body tag. -->
+<script src="{{_theme.asset_base_url}}theme.js"></script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>

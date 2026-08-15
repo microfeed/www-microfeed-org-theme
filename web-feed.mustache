@@ -17,32 +17,36 @@
       </span>
       <span>Self-hosted on <strong>Cloudflare</strong></span>
     </h1>
-    <div class="hero-intro">
-      {{{description}}}
-      {{^description}}
-      microfeed publishes blogs, podcasts, photos, videos, documents, and links—without another server to manage.
-      {{/description}}
-    </div>
+    <ul class="hero-badges" aria-label="microfeed highlights">
+      <li>Agentic</li>
+      <li>Open Source</li>
+      <li>Serverless</li>
+      <li>Free</li>
+      <li>Headless</li>
+    </ul>
     <div class="hero-actions">
-      <a class="button-primary" href="https://docs.microfeed.org/start-here/">Get started for free <span aria-hidden="true">→</span></a>
-      <a class="text-link" href="#whats-new">What’s new <span aria-hidden="true">↓</span></a>
+      <a class="button-primary" href="https://docs.microfeed.org/start-here/">Get started for free</a>
     </div>
+    <a class="hero-whats-new text-link" href="#whats-new">What’s new <span aria-hidden="true">↓</span></a>
   </section>
 
   <section class="product-shot" aria-label="microfeed administration interface preview">
-    <figure class="shot-frame">
-      <figcaption class="shot-caption">
-        <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span>microfeed admin</span>
-        <small>Screenshot placeholder</small>
-      </figcaption>
-      <div class="shot-placeholder" role="img" aria-label="Placeholder for the microfeed administration interface screenshot">
-        <div>
-          <span>Admin UI screenshot</span>
-          <strong>A calm place to publish.</strong>
-        </div>
-      </div>
-    </figure>
+    <div
+      id="microfeed-product-carousel-root"
+      data-edit-item-image-url="{{_theme.asset_base_url}}admin-edit-item.png"
+      data-site-files-image-url="{{_theme.asset_base_url}}admin-site-files.png"
+      data-all-items-image-url="{{_theme.asset_base_url}}admin-all-items.png"
+      data-api-overview-image-url="{{_theme.asset_base_url}}admin-api-overview.png"
+    >
+      <figure class="product-carousel-fallback">
+        <img
+          src="{{_theme.asset_base_url}}admin-edit-item.png"
+          alt="The microfeed admin interface editing an item"
+          width="3270"
+          height="2072"
+        />
+      </figure>
+    </div>
   </section>
 
   <section class="deploy-section" aria-labelledby="deploy-title">
@@ -103,23 +107,39 @@
 
   <section class="workflow-section" aria-labelledby="workflow-title">
     <figure class="agent-shot">
-      <figcaption class="shot-caption">
-        <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span>coding agent</span>
-        <small>Screenshot placeholder</small>
-      </figcaption>
-      <div class="agent-placeholder" role="img" aria-label="Placeholder for a coding agent managing microfeed content">
-        <span>Coding-agent screenshot</span>
-      </div>
+      <img
+        class="agent-screenshot"
+        src="{{_theme.asset_base_url}}coding-agent-deploy.png"
+        alt="A coding agent deploying microfeed to Cloudflare and reporting the production resources it created"
+        width="2476"
+        height="2162"
+        loading="lazy"
+        decoding="async"
+      />
     </figure>
     <div class="workflow-copy">
       <span class="section-kicker">People + agents</span>
-      <h2 id="workflow-title">Use the admin. Or ask an agent.</h2>
-      <p>microfeed stays understandable to the person who owns it. Agents add leverage without turning the system into a black box.</p>
-      <ul class="workflow-points">
-        <li>Publish every supported media type</li>
-        <li>Use one documented workflow for setup and content</li>
-        <li>Review exact targets before destructive actions</li>
+      <h2 id="workflow-title">Use the admin UI. Or ask an agent.</h2>
+      <p>Use the admin UI yourself, or hand a clear task to an AI coding agent (e.g., OpenAI Codex). Try one of these real prompts.</p>
+      <ul class="agent-prompts">
+        <li class="agent-prompt">
+          <details>
+            <summary>Deploy to production</summary>
+            <p>Deploy microfeed to Cloudflare.</p>
+          </details>
+        </li>
+        <li class="agent-prompt">
+          <details>
+            <summary>Draft a podcast episode</summary>
+            <p>Upload the attached audio file and draft show notes for a new episode. Keep it unpublished for now.</p>
+          </details>
+        </li>
+        <li class="agent-prompt">
+          <details>
+            <summary>Build a custom theme</summary>
+            <p>Export the current theme and build me a theme like the GitHub home page, then import it back into the current instance.</p>
+          </details>
+        </li>
       </ul>
     </div>
   </section>

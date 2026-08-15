@@ -1,19 +1,28 @@
 <main id="main-content" class="search-shell">
   <section>
-    <h1>Search microfeed</h1>
-    <p class="search-intro">Search published updates and Pages.</p>
-    <form class="search-form" action="/search/" method="get" data-microfeed-search-scope>
-      <label for="microfeed-search-page-input">Search this site</label>
-      <input
-        class="search-input"
-        id="microfeed-search-page-input"
-        name="q"
-        type="search"
-        value="{{search.query}}"
-        autocomplete="off"
-        data-microfeed-search-input
-      />
-      <div class="search-results" aria-live="polite" data-microfeed-search-results data-microfeed-search-details></div>
+    <h1>Search</h1>
+    <form class="mf-search-page-form" action="/search/" method="get" role="search" data-microfeed-search-scope>
+      <div class="mf-search-control">
+        <input
+          id="microfeed-search-page-input"
+          name="q"
+          type="search"
+          aria-label="Search items and pages"
+          placeholder="Search items and pages"
+          value="{{search.query}}"
+          autocomplete="off"
+          data-microfeed-search-input
+          data-microfeed-search-preview-initial
+        />
+        <button type="submit">
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="m16 16 4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <span>Search</span>
+        </button>
+      </div>
+      <div class="mf-search-page-results" aria-live="polite" data-microfeed-search-results data-microfeed-search-details></div>
     </form>
   </section>
 </main>

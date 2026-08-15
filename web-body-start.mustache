@@ -1,18 +1,96 @@
-<nav class="flex items-center">
-  <div class="flex-1">
-  <a href="/">
-    <img src="{{_theme.asset_base_url}}horizontal-logo.png" alt="microfeed" class="nav-logo" />
-  </a>
-  </div>
-  <div class="flex-none flex">
-  <div class="hide-mobile mr-4">
-<!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/microfeed/microfeed/fork" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Fork microfeed/microfeed on GitHub">Fork</a>
-</div>
-
-<div>
-<!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/microfeed/microfeed" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star microfeed/microfeed on GitHub">Star</a>
-</div>
-  </div>
-</nav>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header" data-microfeed-site-header>
+  <nav class="site-nav" aria-label="Site navigation">
+    <a class="brand-link" href="/" aria-label="microfeed home">
+      <img src="{{_theme.asset_base_url}}horizontal-logo.png" alt="microfeed" class="nav-logo" />
+    </a>
+    <div class="header-actions">
+      <div class="site-links">
+        {{#navigation_pages}}
+        <a href="{{url}}" data-microfeed-nav-item>{{navigation_label}}</a>
+        {{/navigation_pages}}
+      </div>
+      <div id="microfeed-search-trigger-root">
+        <div class="nav-search-trigger" role="group" data-slot="input-group">
+          <span role="group" data-slot="input-group-addon" data-align="inline-start">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+          </span>
+          <input
+            type="search"
+            readonly
+            placeholder="Search"
+            aria-label="Search microfeed"
+            aria-haspopup="dialog"
+            aria-controls="microfeed-search-dialog"
+            data-slot="input-group-control"
+            data-microfeed-search-open
+          />
+          <span role="group" data-slot="input-group-addon" data-align="inline-end">
+            <kbd data-slot="kbd-group" aria-label="Command K">
+              <kbd data-slot="kbd">⌘</kbd>
+              <kbd data-slot="kbd">K</kbd>
+            </kbd>
+          </span>
+        </div>
+        <button
+          type="button"
+          class="nav-search-mobile-trigger"
+          aria-label="Search microfeed"
+          aria-haspopup="dialog"
+          aria-controls="microfeed-search-dialog"
+          data-microfeed-search-open
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+        </button>
+      </div>
+      <div
+        id="microfeed-github-star-root"
+        class="github-star"
+        data-icon-url="{{_theme.asset_base_url}}github-mark.svg"
+      >
+        <a class="github-star-button github-star-button--icon-only" href="https://github.com/microfeed/microfeed" aria-label="Star microfeed/microfeed on GitHub">
+          <img src="{{_theme.asset_base_url}}github-mark.svg" alt="" aria-hidden="true" />
+        </a>
+      </div>
+      <details class="mobile-site-menu">
+        <summary aria-label="Page menu">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M4 7h16"></path>
+            <path d="M4 12h16"></path>
+            <path d="M4 17h16"></path>
+          </svg>
+        </summary>
+        <div class="mobile-site-menu-panel">
+          {{#navigation_pages}}
+          <a href="{{url}}" data-microfeed-nav-item>{{navigation_label}}</a>
+          {{/navigation_pages}}
+        </div>
+      </details>
+      <div id="microfeed-theme-menu-root">
+        <button
+          type="button"
+          class="theme-menu-trigger"
+          aria-label="Color theme: light"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.42 1.42"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>

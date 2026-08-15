@@ -1,6 +1,15 @@
 {
+  "$schema": ".microfeed/schemas/manifest.schema.json",
   "assets": [
-    "assets/horizontal-logo.png"
+    "assets/admin-all-items.png",
+    "assets/admin-api-overview.png",
+    "assets/admin-edit-item.png",
+    "assets/admin-site-files.png",
+    "assets/coding-agent-deploy.png",
+    "assets/github-mark.svg",
+    "assets/horizontal-logo.png",
+    "assets/theme.css",
+    "assets/theme.js"
   ],
   "author": "Listen Notes, Inc.",
   "description": "The standalone theme for www.microfeed.org.",
@@ -10,14 +19,16 @@
     "webBodyStart": "web-body-start.mustache",
     "webFeed": "web-feed.mustache",
     "webHeader": "web-header.mustache",
-    "webItem": "web-item.mustache"
+    "webItem": "web-item.mustache",
+    "webPage": "web-page.mustache",
+    "webSearch": "web-search.mustache"
   },
-  "formatVersion": 1,
+  "formatVersion": 2,
   "homepage": "https://www.microfeed.org/",
   "license": "Unspecified",
   "microfeed": "*",
   "name": "www.microfeed.org",
   "packageId": "microfeed.www",
   "repository": "https://github.com/microfeed/www-microfeed-org-theme",
-  "version": "1.0.0"
+  "version": "1.2.1"
 }

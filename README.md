@@ -2,10 +2,14 @@
 
 This standalone microfeed theme repository contains the theme for
 [www.microfeed.org](https://www.microfeed.org/), published under the package
-identity `microfeed.www@1.0.0` and maintained by Listen Notes, Inc.
+identity `microfeed.www@1.2.0` and maintained by Listen Notes, Inc. Format v2
+adds standalone Page and public Search views while preserving the original
+feed, item, and RSS presentation.
 
-This repository contains the rendered files installed by microfeed. It does not
-recreate private build tools or source files used by the original theme author.
+The Mustache and XSL files are installed directly by microfeed. The theme's
+browser code and styles live under `src/` and are compiled by Vite into the
+declared `assets/theme.js` and `assets/theme.css` files. The UI source uses
+Tailwind CSS and shadcn/ui's Base UI style.
 
 ## Develop
 
@@ -13,15 +17,14 @@ Use Node.js 22.12 or newer and Yarn 4:
 
 ```console
 yarn install
-yarn validate
-yarn test
+yarn build
+yarn check
 yarn preview
 ```
 
-The empty initial `yarn.lock` makes this directory independent from any
-parent workspace; `yarn install` populates it. The local Yarn configuration
-preapproves only the official `@microfeed/theme-kit` package, leaving package
-gates in place for every other dependency.
+The repository-local `yarn.lock` keeps this directory independent from any
+parent workspace. Run `yarn build` after changing files under `src/`, and
+commit the regenerated theme assets with the corresponding source changes.
 
 To preview against a public microfeed JSON Feed instead of a bundled fixture:
 

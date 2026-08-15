@@ -1347,21 +1347,24 @@
 
   .page-content,
   .item-content {
+    --mf-rich-block-gap: 1.5rem;
+
     color: var(--mf-body-text);
     font-size: 1.08rem;
   }
 
-  .item-content p {
-    margin: 0 0 1.5em;
+  .page-content > *,
+  .item-content > * {
+    margin-block: 0;
   }
 
-  .item-content p:last-child {
-    margin-bottom: 0;
+  .page-content > * + *,
+  .item-content > * + * {
+    margin-top: var(--mf-rich-block-gap);
   }
 
   .page-content h2,
   .item-content h2 {
-    margin-top: 2.5rem;
     color: var(--mf-text);
     font-size: 2rem;
   }

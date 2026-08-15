@@ -34,6 +34,7 @@
       "title": "A safer content workflow for coding agents",
       "date_published": "2026-08-12T16:00:00Z",
       "content_text": "Purpose-built tools help coding agents publish and manage content while credentials stay private.",
+      "content_html": "<p>Purpose-built tools help coding agents publish and manage content while credentials stay private.</p><h2>Work with your content</h2><p>Headings and paragraphs share the same deliberate spacing.</p><h3>Use familiar prompts</h3><pre><code>Draft a new episode and keep it unpublished.</code></pre><blockquote>Review every change before publishing.</blockquote>",
       "_microfeed": {
         "date_published_short": "Aug 12, 2026",
         "web_url": "https://www.microfeed.org/i/agent-content-workflow/"

@@ -30,7 +30,7 @@
   "license": "Unspecified",
   "microfeed": "*",
   "name": "www.microfeed.org",
-  "packageId": "microfeed.www",
+  "packageId": "local.www-microfeed-org",
   "repository": "https://github.com/microfeed/www-microfeed-org-theme",
-  "version": "1.2.3"
+  "version": "1.2.4"
 }

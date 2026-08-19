@@ -2806,6 +2806,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"local.www-microfeed-org@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "local.www-microfeed-org@workspace:."
+  dependencies:
+    "@base-ui/react": "npm:^1.6.0"
+    "@microfeed/theme-kit": "npm:^1.0.4"
+    "@tailwindcss/vite": "npm:^4.1.14"
+    "@types/node": "npm:^22.15.3"
+    "@types/react": "npm:^18.3.20"
+    "@types/react-dom": "npm:^18.3.6"
+    "@vitejs/plugin-react": "npm:^5.2.0"
+    class-variance-authority: "npm:^0.7.1"
+    clsx: "npm:^1.2.1"
+    embla-carousel-react: "npm:^8.6.0"
+    lucide-react: "npm:^1.27.0"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    shadcn: "npm:^4.16.0"
+    tailwind-merge: "npm:^3.6.0"
+    tailwindcss: "npm:^4.0.14"
+    typescript: "npm:^6.0.3"
+    vite: "npm:^8.0.13"
+  languageName: unknown
+  linkType: soft
+
 "locate-path@npm:^3.0.0":
   version: 3.0.0
   resolution: "locate-path@npm:3.0.0"
@@ -2898,31 +2923,6 @@ __metadata:
   checksum: 10/7268db63ed5169466540b6fb947aec313200bcf6d40c5ab722c22e242f651994619bcd85601602972d3c85bd2cc45a358a4c61937e9f11a061919a1da569b0c2
   languageName: node
   linkType: hard
-
-"microfeed.www@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "microfeed.www@workspace:."
-  dependencies:
-    "@base-ui/react": "npm:^1.6.0"
-    "@microfeed/theme-kit": "npm:^1.0.4"
-    "@tailwindcss/vite": "npm:^4.1.14"
-    "@types/node": "npm:^22.15.3"
-    "@types/react": "npm:^18.3.20"
-    "@types/react-dom": "npm:^18.3.6"
-    "@vitejs/plugin-react": "npm:^5.2.0"
-    class-variance-authority: "npm:^0.7.1"
-    clsx: "npm:^1.2.1"
-    embla-carousel-react: "npm:^8.6.0"
-    lucide-react: "npm:^1.27.0"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
-    shadcn: "npm:^4.16.0"
-    tailwind-merge: "npm:^3.6.0"
-    tailwindcss: "npm:^4.0.14"
-    typescript: "npm:^6.0.3"
-    vite: "npm:^8.0.13"
-  languageName: unknown
-  linkType: soft
 
 "micromatch@npm:^4.0.8":
   version: 4.0.8

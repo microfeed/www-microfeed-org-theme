@@ -1,5 +1,5 @@
 {
-  "name": "microfeed.www",
+  "name": "local.www-microfeed-org",
   "packageManager": "yarn@4.18.0",
   "private": true,
   "type": "module",

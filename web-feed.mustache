@@ -33,17 +33,19 @@
   <section class="product-shot" aria-label="microfeed administration interface preview">
     <div
       id="microfeed-product-carousel-root"
-      data-edit-item-image-url="{{_theme.asset_base_url}}admin-edit-item.png"
-      data-site-files-image-url="{{_theme.asset_base_url}}admin-site-files.png"
-      data-all-items-image-url="{{_theme.asset_base_url}}admin-all-items.png"
+      data-home-image-url="{{_theme.asset_base_url}}admin-home.png"
+      data-edit-channel-image-url="{{_theme.asset_base_url}}admin-edit-channel.png"
       data-api-overview-image-url="{{_theme.asset_base_url}}admin-api-overview.png"
+      data-all-items-image-url="{{_theme.asset_base_url}}admin-all-items.png"
+      data-site-files-image-url="{{_theme.asset_base_url}}admin-site-files.png"
+      data-theme-editor-image-url="{{_theme.asset_base_url}}admin-theme-editor.png"
     >
       <figure class="product-carousel-fallback">
         <img
-          src="{{_theme.asset_base_url}}admin-edit-item.png"
-          alt="The microfeed admin interface editing an item"
-          width="3270"
-          height="2072"
+          src="{{_theme.asset_base_url}}admin-home.png"
+          alt="The microfeed admin home page showing public access links and the setup checklist"
+          width="3206"
+          height="2160"
         />
       </figure>
     </div>
@@ -60,14 +62,20 @@
         <span class="deploy-number">01</span>
         <div>
           <h3>Clone the repository</h3>
-          <code class="code-line">git clone https://github.com/microfeed/microfeed.git</code>
+          <div class="copyable-text copyable-text--command" data-copyable>
+            <code class="code-line" data-copy-value>git clone https://github.com/microfeed/microfeed.git</code>
+            <span class="copy-text-button-root" data-copy-button-root data-copy-label="command"></span>
+          </div>
         </div>
       </li>
       <li class="deploy-step">
         <span class="deploy-number">02</span>
         <div>
           <h3>Ask your coding agent</h3>
-          <div class="agent-line">Deploy microfeed to Cloudflare.</div>
+          <div class="copyable-text" data-copyable>
+            <code class="agent-line" data-copy-value>Deploy microfeed to Cloudflare.</code>
+            <span class="copy-text-button-root" data-copy-button-root data-copy-label="prompt"></span>
+          </div>
         </div>
       </li>
     </ol>
@@ -125,19 +133,28 @@
         <li class="agent-prompt">
           <details>
             <summary>Deploy to production</summary>
-            <p>Deploy microfeed to Cloudflare.</p>
+            <div class="agent-prompt-text copyable-text" data-copyable>
+              <code data-copy-value>Deploy microfeed to Cloudflare.</code>
+              <span class="copy-text-button-root" data-copy-button-root data-copy-label="prompt"></span>
+            </div>
           </details>
         </li>
         <li class="agent-prompt">
           <details>
             <summary>Draft a podcast episode</summary>
-            <p>Upload the attached audio file and draft show notes for a new episode. Keep it unpublished for now.</p>
+            <div class="agent-prompt-text copyable-text" data-copyable>
+              <code data-copy-value>Upload the attached audio file and draft show notes for a new episode. Keep it unpublished for now.</code>
+              <span class="copy-text-button-root" data-copy-button-root data-copy-label="prompt"></span>
+            </div>
           </details>
         </li>
         <li class="agent-prompt">
           <details>
             <summary>Build a custom theme</summary>
-            <p>Export the current theme and build me a theme like the GitHub home page, then import it back into the current instance.</p>
+            <div class="agent-prompt-text copyable-text" data-copyable>
+              <code data-copy-value>Export the current theme and build me a theme like the GitHub home page, then import it back into the current instance.</code>
+              <span class="copy-text-button-root" data-copy-button-root data-copy-label="prompt"></span>
+            </div>
           </details>
         </li>
       </ul>

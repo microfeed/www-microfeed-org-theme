@@ -448,7 +448,8 @@
     margin-left: 0.05rem;
     padding-left: 0.5rem;
     border-left: 1px solid var(--mf-border);
-    color: var(--mf-muted);
+    color: var(--mf-text);
+    font-weight: 400;
     font-variant-numeric: tabular-nums;
     text-align: center;
   }
@@ -1074,6 +1075,65 @@
     overflow-wrap: anywhere;
   }
 
+  .copyable-text {
+    position: relative;
+  }
+
+  .copyable-text .code-line,
+  .copyable-text .agent-line {
+    padding-right: 3.5rem;
+  }
+
+  .copy-text-button-root {
+    position: absolute;
+    top: 0.48rem;
+    right: 0.48rem;
+    display: flex;
+  }
+
+  .copy-text-button {
+    display: inline-flex;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--mf-border);
+    border-radius: 0.4rem;
+    background: var(--mf-background);
+    color: var(--mf-muted);
+    cursor: pointer;
+    transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+  }
+
+  .copy-text-button:hover {
+    border-color: var(--mf-border-strong);
+    background: var(--mf-surface-blue);
+    color: var(--mf-text);
+  }
+
+  .copy-text-button:focus-visible {
+    outline: 3px solid rgb(25 174 232 / 32%);
+    outline-offset: 2px;
+  }
+
+  .copy-text-button svg {
+    width: 0.95rem;
+    height: 0.95rem;
+  }
+
+  .copyable-text--command .copy-text-button {
+    border-color: rgb(255 255 255 / 28%);
+    background: rgb(255 255 255 / 10%);
+    color: #fff;
+  }
+
+  .copyable-text--command .copy-text-button:hover {
+    border-color: rgb(255 255 255 / 50%);
+    background: rgb(255 255 255 / 18%);
+    color: #fff;
+  }
+
   .code-line::before {
     margin-right: 0.65rem;
     color: var(--mf-accent);
@@ -1217,12 +1277,18 @@
     transform: rotate(45deg);
   }
 
-  .agent-prompt p {
+  .agent-prompt-text {
     margin: -0.15rem 0 1rem 2.3rem;
-    padding: 0.8rem 0.9rem;
     border: 1px solid var(--mf-border);
     border-radius: 0.5rem;
     background: var(--mf-surface);
+  }
+
+  .agent-prompt-text code {
+    display: block;
+    padding: 0.8rem 3.5rem 0.8rem 0.9rem;
+    border: 0;
+    background: transparent;
     color: var(--mf-text);
     font: 0.72rem/1.55 var(--mf-mono);
   }

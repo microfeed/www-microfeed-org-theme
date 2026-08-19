@@ -17,7 +17,7 @@ export default defineConfig({
   build: {
     cssCodeSplit: false,
     emptyOutDir: false,
-    minify: "esbuild",
+    minify: "oxc",
     outDir: "assets",
     sourcemap: false,
     lib: {

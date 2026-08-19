@@ -3,8 +3,10 @@
   "assets": [
     "assets/admin-all-items.png",
     "assets/admin-api-overview.png",
-    "assets/admin-edit-item.png",
+    "assets/admin-edit-channel.png",
+    "assets/admin-home.png",
     "assets/admin-site-files.png",
+    "assets/admin-theme-editor.png",
     "assets/coding-agent-deploy.png",
     "assets/github-mark.svg",
     "assets/horizontal-logo.png",
@@ -30,5 +32,5 @@
   "name": "www.microfeed.org",
   "packageId": "microfeed.www",
   "repository": "https://github.com/microfeed/www-microfeed-org-theme",
-  "version": "1.2.2"
+  "version": "1.2.3"
 }

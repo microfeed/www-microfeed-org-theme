@@ -61,8 +61,8 @@ export function ScreenshotCarousel({
               <img
                 src={screenshot.src}
                 alt={screenshot.alt}
-                width="3270"
-                height="2072"
+                width="3206"
+                height="2160"
                 loading={index === 0 ? "eager" : "lazy"}
                 decoding="async"
               />

@@ -2,7 +2,7 @@
 
 This standalone microfeed theme repository contains the theme for
 [www.microfeed.org](https://www.microfeed.org/), published under the package
-identity `microfeed.www@1.2.0` and maintained by Listen Notes, Inc. Format v2
+identity `microfeed.www@1.2.3` and maintained by Listen Notes, Inc. Format v2
 adds standalone Page and public Search views while preserving the original
 feed, item, and RSS presentation.
 

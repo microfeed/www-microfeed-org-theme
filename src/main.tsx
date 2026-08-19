@@ -1,6 +1,7 @@
 import { flushSync } from "react-dom"
 import { createRoot } from "react-dom/client"
 
+import { CopyTextButton } from "@/components/CopyTextButton"
 import { GitHubStarButton } from "@/components/GitHubStarButton"
 import { SearchTrigger } from "@/components/SearchTrigger"
 import {
@@ -9,6 +10,25 @@ import {
 } from "@/components/ScreenshotCarousel"
 import { ThemeMenu } from "@/components/ThemeMenu"
 import "@/styles/theme.css"
+
+const copyButtonRoots = document.querySelectorAll<HTMLElement>(
+  "[data-copy-button-root]"
+)
+
+copyButtonRoots.forEach((copyButtonRoot) => {
+  const copyable = copyButtonRoot.closest<HTMLElement>("[data-copyable]")
+  const copyValue = copyable?.querySelector<HTMLElement>("[data-copy-value]")
+  const text = copyValue?.textContent?.trim()
+  const label = copyButtonRoot.dataset.copyLabel ?? "text"
+
+  if (text) {
+    flushSync(() => {
+      createRoot(copyButtonRoot).render(
+        <CopyTextButton label={label} text={text} />
+      )
+    })
+  }
+})
 
 const themeMenuRoot = document.querySelector<HTMLElement>(
   "#microfeed-theme-menu-root"
@@ -53,14 +73,19 @@ const screenshotCarouselRoot = document.querySelector<HTMLElement>(
 if (screenshotCarouselRoot) {
   const screenshotDefinitions = [
     {
-      alt: "The microfeed admin interface editing an item and its media, image, title, publication status, and description",
-      label: "Create and edit every kind of content",
-      src: screenshotCarouselRoot.dataset.editItemImageUrl,
+      alt: "The microfeed admin home page showing public access links, recent project updates, and the setup checklist",
+      label: "Launch with a guided setup checklist",
+      src: screenshotCarouselRoot.dataset.homeImageUrl,
     },
     {
-      alt: "The microfeed admin interface managing published site files including llms.txt, robots.txt, and sitemap.xml",
-      label: "Customize files published with your site",
-      src: screenshotCarouselRoot.dataset.siteFilesImageUrl,
+      alt: "The microfeed channel editor with image, title, publisher, website, categories, language, and description controls",
+      label: "Shape your channel and publishing identity",
+      src: screenshotCarouselRoot.dataset.editChannelImageUrl,
+    },
+    {
+      alt: "The microfeed API overview with API access, documentation, agent instructions, and request examples",
+      label: "Build integrations with the REST API",
+      src: screenshotCarouselRoot.dataset.apiOverviewImageUrl,
     },
     {
       alt: "The microfeed admin interface listing published, unlisted, and unpublished items",
@@ -68,9 +93,14 @@ if (screenshotCarouselRoot) {
       src: screenshotCarouselRoot.dataset.allItemsImageUrl,
     },
     {
-      alt: "The microfeed API overview with API access, documentation, agent instructions, and request examples",
-      label: "Build integrations with the REST API",
-      src: screenshotCarouselRoot.dataset.apiOverviewImageUrl,
+      alt: "The microfeed admin interface managing published site files including llms.txt, robots.txt, and sitemap.xml",
+      label: "Customize files published with your site",
+      src: screenshotCarouselRoot.dataset.siteFilesImageUrl,
+    },
+    {
+      alt: "The microfeed theme editor showing version metadata, template source, preview, and install controls",
+      label: "Customize and version every public view",
+      src: screenshotCarouselRoot.dataset.themeEditorImageUrl,
     },
   ]
 

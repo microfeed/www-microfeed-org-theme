@@ -11,6 +11,15 @@ browser code and styles live under `src/` and are compiled by Vite into the
 declared `assets/theme.js` and `assets/theme.css` files. The UI source uses
 Tailwind CSS and shadcn/ui's Base UI style.
 
+## Install with an AI coding agent
+
+Replace `<site-url>` with the root URL of your existing microfeed site, then
+give this prompt to an AI coding agent with terminal access:
+
+```text
+Install the latest version of the theme from https://github.com/microfeed/www-microfeed-org-theme on my microfeed site at <site-url>. Use `npx @microfeed/cli manage`, connect the existing site if needed, install the theme inactive, ask before activation, then verify the site afterward.
+```
+
 ## Develop
 
 Use Node.js 22.12 or newer and Yarn 4:

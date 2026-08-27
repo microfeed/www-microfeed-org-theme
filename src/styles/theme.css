@@ -1025,8 +1025,8 @@
 
   .deploy-steps {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 66rem;
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 50rem;
     margin: 0 auto;
     padding: 0;
     border-top: 1px solid var(--mf-border);
@@ -1039,7 +1039,7 @@
     display: grid;
     grid-template-columns: 2.6rem minmax(0, 1fr);
     gap: 1rem;
-    padding: 2rem 2.5rem 2.25rem 0;
+    padding: 2rem 0 2.25rem;
   }
 
   .deploy-step + .deploy-step {
